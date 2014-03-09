@@ -14,6 +14,9 @@ public class InscricaoEstadualMT extends InscricaoEstadualBase {
     public boolean validar(String numero) {
         boolean valido = false;
         
+        if(numero.equals("isento"))
+        	return true;
+        
         String ie = String.format("%011d", Long.valueOf(limpar(numero, "[^0-9]")));
         
         if (ie.length()==11) {

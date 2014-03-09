@@ -14,6 +14,9 @@ public class InscricaoEstadualAP extends InscricaoEstadualBase {
     public boolean validar(String numero) {
         boolean valido = false;
         
+        if(numero.equals("isento"))
+        	return true;
+        
         String ie = limpar(numero, "[^0-9]");
         
         if (ie.length()==9 && "03".equals(ie.substring(0, 2))) {
