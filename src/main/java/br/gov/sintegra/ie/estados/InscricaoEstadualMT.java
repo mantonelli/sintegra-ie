@@ -14,7 +14,7 @@ public class InscricaoEstadualMT extends InscricaoEstadualBase {
     public boolean validar(String numero) {
         boolean valido = false;
         
-        String ie = limpar(numero, "[^0-9]");
+        String ie = String.format("%011d", Long.valueOf(limpar(numero, "[^0-9]")));
         
         if (ie.length()==11) {
             Integer[] numeros = split(ie);
