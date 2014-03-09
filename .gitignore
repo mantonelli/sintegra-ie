@@ -1,0 +1,9 @@
+target/
+bin/
+.settings/
+.project
+.classpath
+*~
+*.swp
+*.tmp
+*.log
